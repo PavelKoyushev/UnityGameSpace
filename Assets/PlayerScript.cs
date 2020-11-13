@@ -5,10 +5,16 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public GameObject lazer;
+    public GameObject lazerGun;
+    public float shotDelay; //zaderjka 
+
     public float tilt;
     public float speed;
     public float xMin, xMax, zMin, zMax;
     Rigidbody ship;
+
+    float nextShotTime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +34,12 @@ public class PlayerScript : MonoBehaviour
         ship.position = new Vector3(positionX, 0, positionZ);
 
         ship.rotation = Quaternion.Euler(tilt * ship.velocity.z, 0, -ship.velocity.x * tilt);
+
+
+        if (Time.time > nextShotTime && Input.GetButton("Fire1"))
+        {
+            Instantiate(lazer, lazerGun.transform.position, Quaternion.identity);
+            nextShotTime = Time.time + shotDelay;
+        }
     }
 }

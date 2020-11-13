@@ -64,11 +64,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AsteroidScript.cs" />
+    <Compile Include="Assets\EmitterScript.cs" />
     <Compile Include="Assets\ExplosionEffects\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\ExplosionEffects\WarFX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\ExplosionEffects\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
     <Compile Include="Assets\ExplosionEffects\WarFX\Scripts\WFX_LightFlicker.cs" />
     <Compile Include="Assets\ExplosionEffects\WarFX\Spawn System\CFX_SpawnSystem.cs" />
+    <Compile Include="Assets\GrinderScript.cs" />
+    <Compile Include="Assets\LazerScript.cs" />
     <Compile Include="Assets\PlayerScript.cs" />
     <None Include="Assets\ExplosionEffects\WarFX\Shaders\WFX_S Multiply Soft.shader" />
     <None Include="Assets\ExplosionEffects\WarFX\Shaders\WFX_S Multiply Soft Scroll.shader" />
