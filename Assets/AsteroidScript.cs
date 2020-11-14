@@ -16,7 +16,7 @@ public class AsteroidScript : MonoBehaviour
     float mult;
     void Start()
     {
-        mult = Random.Range(0.5f, 1.5f);
+        mult = Random.Range(0.5f, 1.0f);
 
         asteroid = GetComponent<Rigidbody>();
         asteroid.angularVelocity = Random.insideUnitSphere * rotationSpeed;
@@ -43,6 +43,8 @@ public class AsteroidScript : MonoBehaviour
         {
             Instantiate(playerExplosion, other.transform.position, Quaternion.identity);
         }
+
+        GameControllerScript.score += 10;
 
         Destroy(gameObject); //уничтожает текущий обьект
         Destroy(other.gameObject);

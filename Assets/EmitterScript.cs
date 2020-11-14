@@ -15,6 +15,12 @@ public class EmitterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameControllerScript.isStarted)
+        {
+            return;
+        }
+
+
         if (Time.time > nextLaunchTime)
         {
             Vector3 asteroidPosition = new Vector3(
